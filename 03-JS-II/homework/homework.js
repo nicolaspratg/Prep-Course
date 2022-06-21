@@ -105,12 +105,19 @@ function esDiezOCinco(numero) {
 }
 
 function estaEnRango(numero) {
+  if (numero < 50 && numero > 20){
+    return true
+  }
+  else {
+    return false
+  }
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
 }
 
 function esEntero(numero) {
+ return numero % 1 === 0
   // Devuelve "true" si "numero" es un entero (int/integer)
   // Ejemplo: 0.8 -> false
   // Ejemplo: 1 -> true
@@ -121,6 +128,18 @@ function esEntero(numero) {
 }
 
 function fizzBuzz(numero) {
+  if (numero % 3 === 0 && numero % 5 === 0){
+    return 'fizzbuzz'
+  }
+  else if (numero % 5 === 0) {
+    return 'buzz'
+  }
+  else if (numero % 3 === 0 ) {
+    return 'fizz'
+  }
+  else {
+    return numero
+  }
   // Si "numero" es divisible entre 3, devuelve "fizz"
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
