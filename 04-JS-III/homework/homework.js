@@ -98,7 +98,7 @@ function promedioResultadosTest(resultadosTest) {
 
 
 function numeroMasGrande(numeros) {
-  var maximo = numeros[0];
+  var maximo = 0;
   for(var i = 1; i < numeros.length; i++) {
     if(numeros[i] > maximo) { 
       maximo = numeros[i];
@@ -113,12 +113,15 @@ function numeroMasGrande(numeros) {
 
 
 function multiplicarArgumentos() {
+  let producto = 1;
   if(arguments.length === 0){
     return 0
-  }
-  let producto = 1;
-  for(let i = 0; i < arguments.length; i++){
+  } else if (arguments.length === 1){
+    return arguments[0]
+  }else{
+    for(let i = 0; i < arguments.length; i++){
     producto = producto * arguments[i]
+    }
   }
   return producto
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
@@ -130,7 +133,7 @@ function multiplicarArgumentos() {
 function cuentoElementos(arreglo){
   let contador = 0;
   for(let i = 0; i < arreglo.length; i++){
-    if(arreglo[i] > 19){
+    if(arreglo[i] > 18){
       contador++
     }
   
@@ -160,7 +163,7 @@ function diaDeLaSemana(numeroDeDia) {
 
 function empiezaConNueve(n) {
   let num = n.toString()
-  if(num.charAt(0) === "9"){
+  if(num[0] === "9"){
     return true
   }
   return false
@@ -172,7 +175,12 @@ function empiezaConNueve(n) {
 
 
 function todosIguales(arreglo) {
-  
+  var referencia = arreglo[0]
+  for(var i = 0; i < arreglo.length; i++){
+    if(arreglo[i] === referencia){
+      return true;
+      }
+  }
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
